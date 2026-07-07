@@ -4,7 +4,6 @@ import { userService, bookingService, orderService } from '../services/api';
 import { FiUser, FiHeart, FiShoppingBag, FiCalendar } from 'react-icons/fi';
 
 export const UserProfilePage: React.FC = () => {
-  const { user } = useAuth();
   const [profile, setProfile] = useState<any>(null);
   const [bookings, setBookings] = useState<any[]>([]);
   const [orders, setOrders] = useState<any[]>([]);

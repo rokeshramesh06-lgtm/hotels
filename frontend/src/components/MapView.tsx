@@ -1,5 +1,4 @@
 import React from 'react';
-import { FiMapPin, FiPhone, FiClock } from 'react-icons/fi';
 
 interface MapViewProps {
   latitude: number;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from 'react-hook-form';
 
 interface SearchFilterProps {
@@ -6,7 +6,7 @@ interface SearchFilterProps {
 }
 
 export const SearchFilter: React.FC<SearchFilterProps> = ({ onSearch }) => {
-  const { register, handleSubmit, watch } = useForm({
+  const { register, handleSubmit } = useForm({
     defaultValues: {
       query: '',
       cuisine: '',

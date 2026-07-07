@@ -1,5 +1,5 @@
 import React from 'react';
-import { FiMapPin, FiPhone, FiClock, FiStar } from 'react-icons/fi';
+import { FiStar } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 
 interface RestaurantCardProps {

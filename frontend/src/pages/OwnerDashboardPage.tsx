@@ -1,26 +1,24 @@
 import React, { useState } from 'react';
-import { useAuth } from '../context/AuthContext';
 import { restaurantService, menuService } from '../services/api';
 import { FoodItemModal } from '../components/FoodItemModal';
-import { FiPlus, FiEdit2, FiTrash2 } from 'react-icons/fi';
+import { FiPlus, FiEdit2 } from 'react-icons/fi';
 
 export const OwnerDashboardPage: React.FC = () => {
-  const { user } = useAuth();
-  const [restaurants, setRestaurants] = useState<any[]>([]);
+  const [restaurants] = useState<any[]>([]);
   const [selectedRestaurant, setSelectedRestaurant] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
 
-  const handleCreateRestaurant = async (restaurantData: any) => {
-    try {
-      await restaurantService.create(restaurantData);
-      alert('Restaurant created successfully!');
-      // Refresh list
-    } catch (error) {
-      console.error('Error creating restaurant:', error);
-      alert('Failed to create restaurant');
-    }
-  };
+  // const handleCreateRestaurant = async (restaurantData: any) => {
+  //   try {
+  //     await restaurantService.create(restaurantData);
+  //     alert('Restaurant created successfully!');
+  //     // Refresh list
+  //   } catch (error) {
+  //     console.error('Error creating restaurant:', error);
+  //     alert('Failed to create restaurant');
+  //   }
+  // };
 
   const handleAddFood = async (foodData: any) => {
     try {

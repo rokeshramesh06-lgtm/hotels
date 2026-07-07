@@ -8,7 +8,7 @@ import { FiMail, FiLock, FiUser, FiPhone } from 'react-icons/fi';
 export const LoginPage: React.FC = () => {
   const navigate = useNavigate();
   const { login, isAuthenticated } = useAuth();
-  const { register, handleSubmit, formState: { errors, isLoading } } = useForm();
+  const { register, handleSubmit, formState: { isLoading } } = useForm();
   const [isRegister, setIsRegister] = useState(false);
 
   useEffect(() => {
