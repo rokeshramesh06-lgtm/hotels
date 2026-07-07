@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { restaurantService, menuService } from '../services/api';
+import { menuService } from '../services/api';
 import { FoodItemModal } from '../components/FoodItemModal';
 import { FiPlus, FiEdit2 } from 'react-icons/fi';
 
@@ -7,7 +7,7 @@ export const OwnerDashboardPage: React.FC = () => {
   const [restaurants] = useState<any[]>([]);
   const [selectedRestaurant, setSelectedRestaurant] = useState<string | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading] = useState(false);
 
   // const handleCreateRestaurant = async (restaurantData: any) => {
   //   try {

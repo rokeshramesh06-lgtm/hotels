@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useAuth } from '../context/AuthContext';
 import { userService, bookingService, orderService } from '../services/api';
 import { FiUser, FiHeart, FiShoppingBag, FiCalendar } from 'react-icons/fi';
 
